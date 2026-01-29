@@ -1,0 +1,474 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For You ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      color: #fff;
+      min-height: 100vh;
+    }
+    .center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      margin-bottom: 30px;
+      font-size: 2.5rem;
+    }
+    .menu button {
+      width: 220px;
+      margin: 10px;
+      padding: 15px;
+      border-radius: 30px;
+      border: none;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .menu button:hover {
+      transform: scale(1.05);
+    }
+    .photos { background: #ff758c; color: #fff; }
+    .letter { background: #ffb347; color: #fff; }
+    .music  { background: #6a11cb; color: #fff; }
+
+    .page {
+      display: none;
+      padding: 30px;
+    }
+    .back {
+      margin-top: 20px;
+      background: transparent;
+      border: 1px solid #fff;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    /* Photos */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 15px;
+    }
+
+    /* Letter */
+    .letter-box {
+      max-width: 600px;
+      margin: auto;
+      background: rgba(255,255,255,0.15);
+      padding: 25px;
+      border-radius: 20px;
+      line-height: 1.7;
+      font-size: 1.1rem;
+    }
+
+    /* Music */
+    .music-box img {
+      width: 220px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    iframe {
+      border-radius: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Opening Page -->
+  <div id="home" class="center">
+    <h1>Welcome My Love 💖</h1>
+    <div class="menu">
+      <button class="photos" onclick="openPage('photos')">📸 Photos</button>
+      <button class="letter" onclick="openPage('letter')">💌 Love Letter</button>
+      <button class="music" onclick="openPage('music')">🎵 Our Song</button>
+    </div>
+  </div>
+
+  <!-- Photos Page -->
+  <div id="photos" class="page center">
+    <h1>Our Memories 📸</h1>
+    <div class="gallery">
+      <img src="1000075673.jpg" alt="Our Photo" />
+      <img src="https://via.placeholder.com/300" />
+      <img src="https://via.placeholder.com/300" />
+    </div>
+    <button class="back" onclick="goBack()">⬅ Back</button>
+  </div>
+
+  <!-- Love Letter Page -->
+  <div id="letter" class="page center">
+    <h1>My Love Letter 💌</h1>
+    <div class="letter-box">
+      My love,<n      <br><br>
+      Every moment with you feels like a blessing. You are my peace, my happiness,
+      and my favorite thought every single day. This page exists because my heart
+      needed a place to speak to you forever.
+      <br><br>
+      Yours always ❤️
+    </div>
+    <button class="back" onclick="goBack()">⬅ Back</button>
+  </div>
+
+  <!-- Music Page -->
+  <div id="music" class="page center">
+    <h1>Just You & This Song 🎶</h1>
+    <div class="music-box">
+      <img src="https://via.placeholder.com/300" alt="Her Photo" />
+      <br>
+      <iframe width="300" height="170"
+        src="https://youtu.be/UDinlpyEcII?si=CYW6GnD1MGbuNWIZ"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <button class="back" onclick="goBack()">⬅ Back</button>
+  </div>
+
+  <script>
+    function openPage(id) {
+      document.getElementById('home').style.display = 'none';
+      document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
+      document.getElementById(id).style.display = 'flex';
+    }
+    function goBack() {
+      document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
+      document.getElementById('home').style.display = 'flex';
+    }
+  </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For You ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      color: #fff;
+      min-height: 100vh;
+    }
+    .center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      margin-bottom: 30px;
+      font-size: 2.5rem;
+    }
+    .menu button {
+      width: 220px;
+      margin: 10px;
+      padding: 15px;
+      border-radius: 30px;
+      border: none;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .menu button:hover {
+      transform: scale(1.05);
+    }
+    .photos { background: #ff758c; color: #fff; }
+    .letter { background: #ffb347; color: #fff; }
+    .music  { background: #6a11cb; color: #fff; }
+
+    .page {
+      display: none;
+      padding: 30px;
+    }
+    .back {
+      margin-top: 20px;
+      background: transparent;
+      border: 1px solid #fff;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    /* Photos */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 15px;
+    }
+
+    /* Letter */
+    .letter-box {
+      max-width: 600px;
+      margin: auto;
+      background: rgba(255,255,255,0.15);
+      padding: 25px;
+      border-radius: 20px;
+      line-height: 1.7;
+      font-size: 1.1rem;
+    }
+
+    /* Music */
+    .music-box img {
+      width: 220px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    iframe {
+      border-radius: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Opening Page -->
+  <div id="home" class="center">
+    <h1>Welcome My Love 💖</h1>
+    <div class="menu">
+      <button class="photos" onclick="openPage('photos')">📸 Photos</button>
+      <button class="letter" onclick="openPage('letter')">💌 Love Letter</button>
+      <button class="music" onclick="openPage('music')">🎵 Our Song</button>
+    </div>
+  </div>
+
+  <!-- Photos Page -->
+  <div id="photos" class="page center">
+    <h1>Our Memories 📸</h1>
+    <div class="gallery">
+      <img src="1000075673.jpg" alt="Our Photo" />
+      <img src="https://via.placeholder.com/300" />
+      <img src="https://via.placeholder.com/300" />
+    </div>
+    <button class="back" onclick="goBack()">⬅ Back</button>
+  </div>
+
+  <!-- Love Letter Page -->
+  <div id="letter" class="page center">
+    <h1>My Love Letter 💌</h1>
+    <div class="letter-box">
+      My love,<n      <br><br>
+      Every moment with you feels like a blessing. You are my peace, my happiness,
+      and my favorite thought every single day. This page exists because my heart
+      needed a place to speak to you forever.
+      <br><br>
+      Yours always ❤️
+    </div>
+    <button class="back" onclick="goBack()">⬅ Back</button>
+  </div>
+
+  <!-- Music Page -->
+  <div id="music" class="page center">
+    <h1>Just You & This Song 🎶</h1>
+    <div class="music-box">
+      <img src="https://via.placeholder.com/300" alt="Her Photo" />
+      <br>
+      <iframe width="300" height="170"
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <button class="back" onclick="goBack()">⬅ Back</button>
+  </div>
+
+  <script>
+    function openPage(id) {
+      document.getElementById('home').style.display = 'none';
+      document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
+      document.getElementById(id).style.display = 'flex';
+    }
+    function goBack() {
+      document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
+      document.getElementById('home').style.display = 'flex';
+    }
+  </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For You ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      color: #fff;
+      min-height: 100vh;
+    }
+    .center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      margin-bottom: 30px;
+      font-size: 2.5rem;
+    }
+    .menu button {
+      width: 220px;
+      margin: 10px;
+      padding: 15px;
+      border-radius: 30px;
+      border: none;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .menu button:hover {
+      transform: scale(1.05);
+    }
+    .photos { background: #ff758c; color: #fff; }
+    .letter { background: #ffb347; color: #fff; }
+    .music  { background: #6a11cb; color: #fff; }
+
+    .page {
+      display: none;
+      padding: 30px;
+    }
+    .back {
+      margin-top: 20px;
+      background: transparent;
+      border: 1px solid #fff;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    /* Photos */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 15px;
+    }
+
+    /* Letter */
+    .letter-box {
+      max-width: 600px;
+      margin: auto;
+      background: rgba(255,255,255,0.15);
+      padding: 25px;
+      border-radius: 20px;
+      line-height: 1.7;
+      font-size: 1.1rem;
+    }
+
+    /* Music */
+    .music-box img {
+      width: 220px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    iframe {
+      border-radius: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Opening Page -->
+  <div id="home" class="center">
+    <h1>Welcome My Love 💖</h1>
+    <div class="menu">
+      <button class="photos" onclick="openPage('photos')">📸 Photos</button>
+      <button class="letter" onclick="openPage('letter')">💌 Love Letter</button>
+      <button class="music" onclick="openPage('music')">🎵 Our Song</button>
+    </div>
+  </div>
+
+  <!-- Photos Page -->
+  <div id="photos" class="page center">
+    <h1>Our Memories 📸</h1>
+    <div class="gallery">
+      <img src="1000075673.jpg" alt="Our Photo" />
+      <img src="https://via.placeholder.com/300" />
+      <img src="https://via.placeholder.com/300" />
+    </div>
+    <button class="back" onclick="goBack()">⬅ Back</button>
+  </div>
+
+  <!-- Love Letter Page -->
+  <div id="letter" class="page center">
+    <h1>My Love Letter 💌</h1>
+    <div class="letter-box">
+      My love,<n      <br><br>
+      Every moment with you feels like a blessing. You are my peace, my happiness,
+      and my favorite thought every single day. This page exists because my heart
+      needed a place to speak to you forever.
+      <br><br>
+      Yours always ❤️
+    </div>
+    <button class="back" onclick="goBack()">⬅ Back</button>
+  </div>
+
+  <!-- Music Page -->
+  <div id="music" class="page center">
+    <h1>Just You & This Song 🎶</h1>
+    <div class="music-box">
+      <img src="https://via.placeholder.com/300" alt="Her Photo" />
+      <br>
+      <iframe width="300" height="170"
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <button class="back" onclick="goBack()">⬅ Back</button>
+  </div>
+
+  <script>
+    function openPage(id) {
+      document.getElementById('home').style.display = 'none';
+      document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
+      document.getElementById(id).style.display = 'flex';
+    }
+    function goBack() {
+      document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
+      document.getElementById('home').style.display = 'flex';
+    }
+  </script>
+
+</body>
+</html>
